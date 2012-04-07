@@ -1,0 +1,21 @@
+<%= form_for(@welcom_development) do |f| %>
+  <% if @welcom_development.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@welcom_development.errors.count, "error") %> prohibited this welcom_development from being saved:</h2>
+
+      <ul>
+      <% @welcom_development.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

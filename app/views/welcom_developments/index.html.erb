@@ -1,0 +1,23 @@
+<h1>Listing welcom_developments</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @welcom_developments.each do |welcom_development| %>
+  <tr>
+    <td><%= welcom_development.title %></td>
+    <td><%= link_to 'Show', welcom_development %></td>
+    <td><%= link_to 'Edit', edit_welcom_development_path(welcom_development) %></td>
+    <td><%= link_to 'Destroy', welcom_development, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Welcom development', new_welcom_development_path %>

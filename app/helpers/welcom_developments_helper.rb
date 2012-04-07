@@ -1,0 +1,2 @@
+module WelcomDevelopmentsHelper
+end
